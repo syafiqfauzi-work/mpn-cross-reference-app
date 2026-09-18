@@ -44,7 +44,7 @@ if st.button("Find", type="primary"):
             st.dataframe(exact_match_data, hide_index=True)
             
         with col2:
-            st.subheader("🔄 Almost Same (Alternatif)")
+            st.subheader("🔄 Almost Same")
             st.dataframe(almost_same_data, hide_index=True)
             
     else:
