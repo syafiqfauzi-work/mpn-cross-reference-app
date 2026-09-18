@@ -10,15 +10,15 @@ st.set_page_config(
 
 # Tajuk Aplikasi
 st.title("🔍 MPN Cross-Reference & Alternate Search")
-st.markdown("Cari *Exact Match* dan *Almost Same* part alternatif dengan pantas tanpa perlu buka banyak website.")
+st.markdown("Find *Exact Match* & *Almost Same* alternative part.")
 
 # Kotak Carian MPN
-mpn_input = st.text_input("Masukkan Manufacturer Part Number (MPN):", placeholder="Contoh: LM358N")
+mpn_input = st.text_input("Input Manufacturer Part Number (MPN):", placeholder="Example: LM358N")
 
 # Button Search
-if st.button("Cari Alternatif", type="primary"):
+if st.button("Find", type="primary"):
     if mpn_input:
-        st.info(f"Sedang mencari maklumat untuk MPN: **{mpn_input}**...")
+        st.info(f"Scouring the web for parts: **{mpn_input}**...")
         
         # Mock Data untuk Exact Match
         exact_match_data = pd.DataFrame({
@@ -48,4 +48,4 @@ if st.button("Cari Alternatif", type="primary"):
             st.dataframe(almost_same_data, hide_index=True)
             
     else:
-        st.warning("Sila masukkan MPN terlebih dahulu!")
+        st.warning("Please enter MPN first!")
